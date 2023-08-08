@@ -48,6 +48,11 @@ header img {
     margin-left: -35px !important;
 }
 
+.style-module--Logo--c7351 .gatsby-image-wrapper {
+    width: 160px;
+    height: 80px;
+}
+
 @media only screen and (max-width: 600px) {
     .updates-section iframe {
         width: 350px !important;
