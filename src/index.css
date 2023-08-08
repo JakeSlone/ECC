@@ -1,5 +1,5 @@
 .style-module--Header--9993b {
-    margin: 40px 0 100px 0;
+    margin: 40px 0 100px 0 !important;
 }
 .style-module--heroImage--9e361 {
     width: 80% !important;
@@ -7,41 +7,41 @@
 }
 
 .updates-section {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 130px;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 130px !important;
 }
 
 .updates-section h3 {
-    margin: 0 0 2rem 0;
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+    margin: 0 0 2rem 0 !important;
+    font-size: 1.75rem !important;
+    line-height: 2.25rem !important;
 }
 
 .membership-section {
-    width: 100%;
-    height: 100%;
-    max-width: 62.5rem;
-    margin: 0 auto 8rem auto;
-    padding: 0 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 62.5rem !important;
+    margin: 0 auto 8rem auto !important;
+    padding: 0 2.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
 }
 
 .membership-section-text {
-    width: 500px;
+    width: 500px !important;
 }
 
 .membership-section img {
-    width: 340px;
+    width: 340px !important;
 }
 
 .style-module--Hero--12fbf {
-    min-height: 37vh;
+    min-height: 37vh !important;
 }
 
 header img {
@@ -50,15 +50,15 @@ header img {
 
 @media only screen and (max-width: 600px) {
     .updates-section iframe {
-        width: 350px;
+        width: 350px !important;
     }
 
     .style-module--Links--2e0f2 {
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
     }
 
     .style-module--Footer--a57f4 img {
-        display: none;
+        display: none !important;
     }
 
     footer {
