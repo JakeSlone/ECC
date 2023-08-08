@@ -1,0 +1,51 @@
+{
+    "siteMetadata": {
+        "language": "en",
+        "siteUrl": "https://edmontonchessclub.com",
+        "title": "Edmonton Chess Club",
+        "titleTemplate": "Edmonton Chess Club",
+        "description": "Edmonton Chess Club",
+        "author": "Jake Slone",
+        "avatar": "../content/images/gatsby.png",
+        "bio": "",
+        "social": {
+            "facebook": "https://www.facebook.com/TheEdmontonChessClub",
+            "github": "https://github.com/konstantinmuenster",
+            "medium": "https://www.facebook.com/TheEdmontonChessClub",
+            "linkedin": "https://www.linkedin.com/in/konstantin-muenster/",
+            "mail": "mailto:jake@slone.ca"
+        }
+    },
+    "siteConfiguration": {
+        "logo": { "image": "../content/images/RookWhiteHDTrans.png" },
+        "navigation": {
+            "header": [
+                { "label": "Updates", "url": "/#updates" },
+                { "label": "About", "url": "/#about" },
+                { "label": "Membership", "url": "/membership" },
+                { "label": "Chess Boxing", "url": "/chessboxing" }
+            ],
+            "ctaButton": {
+                "openNewTab": true,
+                "label": "Lichess",
+                "url": "https://lichess.org/team/edmonton-chess-club"
+            },
+            "footer": [
+                {
+                    "label": "10840 124 St, Edmonton, AB T5M 0H3",
+                    "url": "#"
+                },
+                {
+                    "label": "780-424-0283",
+                    "url": "tel:+780-424-0283"
+                },
+                { "label": "Edmonton Chess Club", "url": "#" }
+            ]
+        },
+        "featureToggles": {
+            "useDarkModeAsDefault": true,
+            "useDarkModeBasedOnUsersPreference": true,
+            "useCookieBar": false
+        }
+    }
+}

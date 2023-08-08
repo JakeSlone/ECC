@@ -1,0 +1,13 @@
+{
+    "name": "",
+    "email": "",
+    "description": "",
+    "image": {
+        "src": "../../images/favicon.png",
+        "alt": "favicon"
+    },
+    "socialProfiles": {
+        "from": ["Facebook", "Mail"],
+        "showIcons": true
+    }
+}

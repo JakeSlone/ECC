@@ -1,0 +1,15 @@
+{
+    "heroPhoto": {
+        "src": "../../images/LogoWhiteHDTrans.png",
+        "alt": "My Photo"
+    },
+    "title": "Welcome",
+    "subtitle": {
+        "prefix": "to the Edmonton Chess Club!"
+    },
+    "description": "Edmontons official and only chess club, join us today!",
+    "socialProfiles": {
+        "from": ["Facebook", "Mail"],
+        "showIcons": false
+    }
+}
