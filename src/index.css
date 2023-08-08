@@ -49,8 +49,8 @@ header img {
 }
 
 .style-module--Logo--c7351 .gatsby-image-wrapper {
-    width: 160px;
-    height: 80px;
+    width: 160px !important;
+    height: 80px !important;
 }
 
 @media only screen and (max-width: 600px) {
