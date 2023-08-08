@@ -50,6 +50,15 @@ header img {
     height: 80px !important;
 }
 
+footer img {
+    width: 160px !important;
+    height: 80px !important;
+}
+
+.style-module--Logo--c7351 img {
+    width: 160px !important;
+    height: 80px !important;
+}
 @media only screen and (max-width: 600px) {
     .updates-section iframe {
         width: 350px !important;
