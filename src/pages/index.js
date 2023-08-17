@@ -1,4 +1,5 @@
 import React from "react";
+import { Script } from "gatsby";
 import {
     AboutSection,
     HeroSection,
@@ -11,15 +12,15 @@ import "../index.css";
 export default function IndexPage() {
     return (
         <>
-            <script
+            <Script
                 async
                 src="https://www.googletagmanager.com/gtag/js?id=G-KZQBFGR65B"
-            ></script>
-            <script>
-                window.dataLayer = window.dataLayer || []; function gtag()
+            />
+            <Script
+                src="window.dataLayer = window.dataLayer || []; function gtag()
                 {dataLayer.push(arguments)}
-                gtag('js', new Date()); gtag('config', 'G-KZQBFGR65B');
-            </script>
+                gtag('js', new Date()); gtag('config', 'G-KZQBFGR65B');"
+            />
             <Seo />
             <Page useSplashScreenAnimation>
                 <HeroSection sectionId="hero" />
