@@ -17,7 +17,7 @@ export default function Membership() {
                             operating hours free of charge to see what we are
                             about. Then if you feel like joining, get in contact
                             with ECC staff! Membership is 25$ annually for
-                            adults and 15$ annualy for juniors.
+                            adults and 15$ annually for juniors.
                         </p>
                     </div>
                     <img src={trophy} alt="trophy" />
