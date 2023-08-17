@@ -1,11 +1,11 @@
 {
     "siteMetadata": {
         "language": "en",
-        "siteUrl": "https://edmontonchessclub.com",
+        "siteUrl": "https://edmontonchess.com",
         "title": "Edmonton Chess Club",
         "titleTemplate": "Edmonton Chess Club",
-        "description": "Edmonton Chess Club",
-        "author": "Jake Slone",
+        "description": "Edmontons official and only chess club since 1908, join us today!",
+        "author": "ECC",
         "avatar": "../content/images/gatsby.png",
         "bio": "",
         "social": {
@@ -13,7 +13,7 @@
             "github": "",
             "medium": "https://www.facebook.com/TheEdmontonChessClub",
             "linkedin": "",
-            "mail": "mailto:staff@edmontonchess.ca"
+            "mail": "mailto:staff@edmontonchess.com"
         }
     },
     "siteConfiguration": {
