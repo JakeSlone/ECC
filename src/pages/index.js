@@ -11,6 +11,15 @@ import "../index.css";
 export default function IndexPage() {
     return (
         <>
+            <script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-KZQBFGR65B"
+            ></script>
+            <script>
+                window.dataLayer = window.dataLayer || []; function gtag()
+                {window.dataLayer.push(arguments)}
+                gtag('js', new Date()); gtag('config', 'G-KZQBFGR65B');
+            </script>
             <Seo />
             <Page useSplashScreenAnimation>
                 <HeroSection sectionId="hero" />
