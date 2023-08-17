@@ -17,7 +17,7 @@ export default function IndexPage() {
             ></script>
             <script>
                 window.dataLayer = window.dataLayer || []; function gtag()
-                {window.dataLayer.push(arguments)}
+                {dataLayer.push(arguments)}
                 gtag('js', new Date()); gtag('config', 'G-KZQBFGR65B');
             </script>
             <Seo />
