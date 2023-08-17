@@ -14,6 +14,7 @@ export default function IndexPage() {
             <Seo />
             <Page useSplashScreenAnimation>
                 <HeroSection sectionId="hero" />
+                <AboutSection sectionId="about" heading="About us" />
                 <div className="updates-section" id="updates">
                     <h3>Recent Updates</h3>
                     <br />
@@ -24,7 +25,6 @@ export default function IndexPage() {
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     ></iframe>
                 </div>
-                <AboutSection sectionId="about" heading="About us" />
             </Page>
         </>
     );

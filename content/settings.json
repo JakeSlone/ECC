@@ -10,19 +10,19 @@
         "bio": "",
         "social": {
             "facebook": "https://www.facebook.com/TheEdmontonChessClub",
-            "github": "https://github.com/konstantinmuenster",
+            "github": "",
             "medium": "https://www.facebook.com/TheEdmontonChessClub",
-            "linkedin": "https://www.linkedin.com/in/konstantin-muenster/",
-            "mail": "mailto:jake@slone.ca"
+            "linkedin": "",
+            "mail": "mailto:staff@edmontonchess.ca"
         }
     },
     "siteConfiguration": {
         "logo": { "image": "../content/images/RookWhiteHDTrans.png" },
         "navigation": {
             "header": [
-                { "label": "Updates", "url": "/#updates" },
                 { "label": "About", "url": "/#about" },
-                { "label": "Membership", "url": "/membership" },
+                { "label": "Join", "url": "/join" },
+                { "label": "Calendar", "url": "/calendar" },
                 { "label": "Chess Boxing", "url": "/chessboxing" }
             ],
             "ctaButton": {
@@ -32,14 +32,14 @@
             },
             "footer": [
                 {
-                    "label": "10840 124 St, Edmonton, AB T5M 0H3",
+                    "label": "10840 124 St Unit 204, Edmonton, AB T5M 0H3",
                     "url": "#"
                 },
                 {
                     "label": "780-424-0283",
                     "url": "tel:+780-424-0283"
                 },
-                { "label": "Edmonton Chess Club", "url": "#" }
+                { "label": "ECC", "url": "#" }
             ]
         },
         "featureToggles": {

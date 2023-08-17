@@ -3,7 +3,7 @@ import { AboutSection, Page } from "gatsby-theme-portfolio-minimal";
 
 import "../index.css";
 
-import dripgod from "../../content/images/dripgod.jpg";
+import trophy from "../../content/images/trophy.jpg";
 
 export default function Membership() {
     return (
@@ -11,16 +11,16 @@ export default function Membership() {
             <Page useSplashScreenAnimation>
                 <div className="membership-section">
                     <div className="membership-section-text">
-                        <h3>Membership</h3>
+                        <h3>Join</h3>
                         <p>
                             Please come check out the club anytime during our
                             operating hours free of charge to see what we are
                             about. Then if you feel like joining, get in contact
-                            with Dustin or Robert to join the club! Membership
-                            is 25$ annually.
+                            with ECC staff! Membership is 25$ annually for
+                            adults and 15$ annualy for juniors.
                         </p>
                     </div>
-                    <img src={dripgod} alt="drip god" />
+                    <img src={trophy} alt="trophy" />
                 </div>
             </Page>
         </>

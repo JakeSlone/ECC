@@ -59,6 +59,10 @@ footer img {
     width: 160px !important;
     height: 80px !important;
 }
+
+.calendar {
+    justify-content: center !important;
+}
 @media only screen and (max-width: 600px) {
     .updates-section iframe {
         width: 350px !important;
