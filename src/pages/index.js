@@ -6,7 +6,7 @@ import {
     Page,
     Seo,
 } from "gatsby-theme-portfolio-minimal";
-
+import { Analytics } from "@vercel/analytics/react";
 import "../index.css";
 
 export default function IndexPage() {
@@ -22,6 +22,7 @@ export default function IndexPage() {
                 gtag('js', new Date()); gtag('config', 'G-KZQBFGR65B');"
             />
             <Seo />
+            <Analytics />
             <Page useSplashScreenAnimation>
                 <HeroSection sectionId="hero" />
                 <AboutSection sectionId="about" heading="About us" />
