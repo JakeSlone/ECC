@@ -3,11 +3,13 @@ imageSrc: "../../images/aboutphoto.jpg"
 imageAlt: "2019 BOAB Winners"
 ---
 
-The Edmonton Chess Club is open four nights per week.
+<ul>
+  <li><strong>Monday</strong> (6:30 PM - 11:00 PM): 4 casual rapid games (25 min per player).</li>
+  <li><strong>Wednesday</strong> (7:00 PM): <a href="https://lichess.org/team/edmonton-chess-club">Lichess.org online tournament</a>.</li>
+  <li><strong>Thursday</strong> (6:30 PM - Midnight): 1 CFC-rated tournament game (90 min + 30 sec increment).</li>
+  <li><strong>Saturday</strong> (1:00 PM - 5:00 PM): Casual games, EJCC (Edmonton Junior Chess Club), CFC tournaments, and lectures.</li>
+</ul>
 
-Monday - 6:30pm-11:00pm. - 4 Casual rapid(25min)per player games are played. <br/>
-Wednesday - 6:30-midght. - (Mandatory Masks) 1 Tournament CFC -rated game (60min+30sec) 1 game per night. <br/>
-Thursday - 6:30pm-midnight. - 1 Tournament CFC-rated game(90min+30sec) 1 game per night. <br/>
-Saturday - 1:00pm-5pm. - Casual active/EJCC(Edmonton Junior Chess Club )/CFC Tournaments/ Lectures. <br/>
-
-CFC (Chess Federation of Canada) tournament events are held on weekends, roughly once per month. For more information regarding CFC-rated events, please visit - www.Albertachess.org - Under "Tournaments".
+<p>CFC (Chess Federation of Canada) tournament events are held on weekends, roughly once per month.  
+For more information about CFC-rated events, please visit  
+<a href="https://www.albertachess.org">www.Albertachess.org</a> under "Tournaments".</p>
