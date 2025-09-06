@@ -43,6 +43,16 @@ export function SiteFooter() {
                 Events
               </Link>
             </li>
+            <li>
+              <a
+                href="https://www.facebook.com/TheEdmontonChessClub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground inline-flex items-center gap-1"
+              >
+                Facebook
+              </a>
+            </li>
           </ul>
         </div>
       </div>
