@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@vercel/analytics':
+        specifier: ^1.5.0
+        version: 1.5.0(react@18.3.1)
+      '@vercel/speed-insights':
+        specifier: ^1.2.0
+        version: 1.2.0(react@18.3.1)
       dotenv:
         specifier: ^17.2.1
         version: 17.2.1
@@ -1548,6 +1554,32 @@ packages:
     peerDependencies:
       react: '>= 16.8.0'
 
+  '@vercel/analytics@1.5.0':
+    resolution: {integrity: sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+
   '@vercel/build-utils@12.1.0':
     resolution: {integrity: sha512-yqpAh2KHm9iWUXo/aRWiLIxi8dMAwFtse2iZsg2QNEMs9W20va6L8PMFvdAa5MX9pgRwc38gbjD3V7drxSwq4g==}
 
@@ -1561,6 +1593,29 @@ packages:
 
   '@vercel/node@5.3.21':
     resolution: {integrity: sha512-rtyylPomqpMFQu5DcAqXYf+J3gvboakpBewpjWUgSrkSwtu0mqgpYFjys6VaXb55qePhH9K6HYARaYLEuo9OLw==}
+
+  '@vercel/speed-insights@1.2.0':
+    resolution: {integrity: sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw==}
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   '@vercel/static-config@3.1.2':
     resolution: {integrity: sha512-2d+TXr6K30w86a+WbMbGm2W91O0UzO5VeemZYBBUJbCjk/5FLLGIi8aV6RS2+WmaRvtcqNTn2pUA7nCOK3bGcQ==}
@@ -4652,6 +4707,10 @@ snapshots:
       '@use-gesture/core': 10.3.1
       react: 18.3.1
 
+  '@vercel/analytics@1.5.0(react@18.3.1)':
+    optionalDependencies:
+      react: 18.3.1
+
   '@vercel/build-utils@12.1.0': {}
 
   '@vercel/error-utils@2.0.3': {}
@@ -4705,6 +4764,10 @@ snapshots:
       - encoding
       - rollup
       - supports-color
+
+  '@vercel/speed-insights@1.2.0(react@18.3.1)':
+    optionalDependencies:
+      react: 18.3.1
 
   '@vercel/static-config@3.1.2':
     dependencies:
