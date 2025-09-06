@@ -1,47 +1,56 @@
-// Service Worker for Edmonton Chess Club
-const CACHE_NAME = "edmonton-chess-club-v2.0.0";
-const urlsToCache = [
-  "/",
-  "/about",
-  "/events",
-  "/membership",
-  "/contact",
-  "/favicon.svg",
-  "/favicon.ico",
-];
+// Service Worker for Edmonton Chess Club - Aggressive Cache Busting
+const CACHE_NAME = "edmonton-chess-club-v2.1.0";
+const CACHE_VERSION = "2.1.0";
 
-// Install event - cache resources
+// Install event - skip waiting and take control immediately
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log("Opened cache");
-      return cache.addAll(urlsToCache);
-    }),
-  );
+  console.log("Service Worker installing...");
+  self.skipWaiting();
 });
 
-// Fetch event - serve from cache, fallback to network
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      // Return cached version or fetch from network
-      return response || fetch(event.request);
-    }),
-  );
-});
-
-// Activate event - clean up old caches
+// Activate event - clear all caches and take control
 self.addEventListener("activate", (event) => {
+  console.log("Service Worker activating...");
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log("Deleting old cache:", cacheName);
+    caches
+      .keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            console.log("Deleting cache:", cacheName);
             return caches.delete(cacheName);
-          }
-        }),
-      );
-    }),
+          }),
+        );
+      })
+      .then(() => {
+        console.log("All caches cleared, claiming clients");
+        return self.clients.claim();
+      }),
+  );
+});
+
+// Fetch event - always fetch from network first, then cache
+self.addEventListener("fetch", (event) => {
+  // Skip non-GET requests
+  if (event.request.method !== "GET") {
+    return;
+  }
+
+  event.respondWith(
+    fetch(event.request)
+      .then((response) => {
+        // If successful, cache the response
+        if (response.status === 200) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone);
+          });
+        }
+        return response;
+      })
+      .catch(() => {
+        // If network fails, try to serve from cache
+        return caches.match(event.request);
+      }),
   );
 });
