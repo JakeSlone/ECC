@@ -28,6 +28,13 @@ export default function About() {
               social events. We believe chess is a game for everyone and work to
               make it accessible to all members of our community.
             </div>
+            <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+              <p className="text-sm text-blue-800">
+                The Edmonton Chess Club is a registered nonprofit organization
+                dedicated to promoting chess education and community engagement
+                in Edmonton and surrounding areas.
+              </p>
+            </div>
           </div>
           <div className="rounded-xl border bg-card p-6">
             <h2 className="text-xl font-semibold">What we offer</h2>
