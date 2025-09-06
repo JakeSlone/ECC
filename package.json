@@ -22,12 +22,9 @@
     "vercel-build": "vite build"
   },
   "dependencies": {
-    "@storyblok/js": "^4.2.7",
-    "@storyblok/react": "^5.4.8",
-    "@storyblok/richtext": "^3.7.2",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "storyblok-js-client": "^7.1.4",
+    "react-helmet-async": "^2.0.5",
     "zod": "^3.25.76"
   },
   "devDependencies": {

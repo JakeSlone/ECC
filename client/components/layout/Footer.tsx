@@ -7,16 +7,14 @@ export function SiteFooter() {
         <div>
           <div className="font-serif text-lg">Edmonton Chess Club</div>
           <p className="text-sm text-muted-foreground mt-2 max-w-xs">
-            A welcoming community for chess players of all ages and levels in
-            Edmonton and beyond.
+            Edmonton's premier chess club.
           </p>
         </div>
         <div>
           <div className="font-medium mb-3">Visit Us</div>
           <ul className="text-sm text-muted-foreground space-y-1">
-            <li>3rd Floor, Annex Building</li>
-            <li>118 Avenue NW, Edmonton, AB</li>
-            <li>Club Nights: Tue & Thu 6:30–10:00 PM</li>
+            <li>10840 124 St #204</li>
+            <li>Edmonton, AB T5M 0H3</li>
           </ul>
         </div>
         <div>
@@ -24,10 +22,15 @@ export function SiteFooter() {
           <ul className="text-sm text-muted-foreground space-y-1">
             <li>
               <a
-                href="mailto:contact@edmontonchessclub.ca"
+                href="mailto:contact@edmontonchess.com"
                 className="hover:text-foreground"
               >
-                contact@edmontonchessclub.ca
+                contact@edmontonchess.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:780-424-0283" className="hover:text-foreground">
+                780-424-0283
               </a>
             </li>
             <li>
