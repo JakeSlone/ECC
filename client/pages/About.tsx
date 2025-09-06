@@ -1,71 +1,48 @@
 import Layout from "@/components/layout/Layout";
-import { usePage } from "@/hooks/useStoryblok";
-import StoryblokContent from "@/components/StoryblokContent";
-import { Skeleton } from "@/components/ui/skeleton";
+import { SEO } from "@/components/SEO";
 
 export default function About() {
-  const { data: aboutData, isLoading, error } = usePage("about");
-  const aboutContent = aboutData?.story?.content;
-
-  if (isLoading && !error) {
-    return (
-      <Layout>
-        <section className="container py-20">
-          <div className="grid gap-10 md:grid-cols-2 md:items-start">
-            <div>
-              <Skeleton className="h-12 w-3/4 mb-6" />
-              <Skeleton className="h-6 w-full mb-4" />
-              <Skeleton className="h-6 w-full mb-4" />
-              <Skeleton className="h-6 w-3/4" />
-            </div>
-            <div className="rounded-xl border bg-card p-6">
-              <Skeleton className="h-6 w-1/2 mb-4" />
-              <div className="space-y-3">
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-5/6" />
-                <Skeleton className="h-4 w-4/5" />
-                <Skeleton className="h-4 w-3/4" />
-              </div>
-            </div>
-          </div>
-        </section>
-      </Layout>
-    );
-  }
-
   return (
     <Layout>
+      <SEO
+        title="About Edmonton Chess Club"
+        description="Learn about Edmonton Chess Club's history, mission, and commitment to fostering a welcoming chess community for players of all skill levels in Edmonton, Alberta."
+        keywords="Edmonton chess club history, chess community Edmonton, chess club mission, chess lessons Edmonton, chess tournaments Alberta"
+        canonical="https://edmontonchess.com/about"
+      />
       <section className="container py-20">
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div>
             <h1 className="font-serif text-4xl md:text-5xl tracking-tight">
-              {aboutContent?.title || "About the Edmonton Chess Club"}
+              About Us
             </h1>
             <div className="mt-6 text-lg text-muted-foreground">
-              <StoryblokContent content={aboutContent?.description} />
+              Founded in 1908, the Edmonton Chess Club has been a cornerstone of
+              the local chess community for over a century. We provide a
+              welcoming environment for players of all ages and skill levels to
+              learn, play, and grow in the game of chess.
             </div>
-            {aboutContent?.additional_content && (
-              <div className="mt-4 text-muted-foreground">
-                <StoryblokContent content={aboutContent.additional_content} />
-              </div>
-            )}
+            <div className="mt-4 text-muted-foreground">
+              Our club is affiliated with the Chess Federation of Canada (CFC)
+              and regularly hosts rated tournaments, coaching sessions, and
+              social events. We believe chess is a game for everyone and work to
+              make it accessible to all members of our community.
+            </div>
+            <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+              <p className="text-sm text-blue-800">
+                The Edmonton Chess Club is a registered nonprofit organization
+                dedicated to promoting chess education and community engagement
+                in Edmonton and surrounding areas.
+              </p>
+            </div>
           </div>
           <div className="rounded-xl border bg-card p-6">
-            <h2 className="text-xl font-semibold">
-              {aboutContent?.offerings?.title || "What we offer"}
-            </h2>
-            {aboutContent?.offerings?.list ? (
-              <div className="mt-4 space-y-3 text-sm text-muted-foreground">
-                <StoryblokContent content={aboutContent.offerings.list} />
-              </div>
-            ) : (
-              <ul className="mt-4 space-y-3 text-sm text-muted-foreground list-disc pl-5">
-                <li>Weekly club nights and casual play</li>
-                <li>USCF/CFC-rated tournaments and leagues</li>
-                <li>Coaching, lectures, and analysis sessions</li>
-                <li>Junior programs and scholastic events</li>
-              </ul>
-            )}
+            <h2 className="text-xl font-semibold">What we offer</h2>
+            <ul className="mt-4 space-y-3 text-sm text-muted-foreground list-disc pl-5">
+              <li>Weekly club nights and casual play</li>
+              <li>FIDE/CFC-rated tournaments and leagues</li>
+              <li>Coaching</li>
+            </ul>
           </div>
         </div>
       </section>

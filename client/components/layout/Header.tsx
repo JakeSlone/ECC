@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -13,21 +15,9 @@ const navItems = [
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2 group">
-      <div className="relative p-2 rounded-md bg-primary text-primary-foreground shadow-sm ring-1 ring-black/5">
-        {/* Chess Knight */}
-        <svg viewBox="0 0 24 24" className="h-5 w-5">
-          <path
-            d="M7 20h10v-2.5a4.5 4.5 0 0 0-4.5-4.5H12l1.5-3-4-2-2 3v4H6a2 2 0 0 0-2 2V20h3z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
       <div className="leading-tight">
         <div className="font-serif text-xl tracking-tight text-foreground group-hover:text-primary transition-colors">
-          Edmonton Chess Club
-        </div>
-        <div className="text-xs text-muted-foreground">
-          Est. 1922 • Edmonton, AB
+          ECC
         </div>
       </div>
     </Link>
@@ -35,10 +25,14 @@ function Logo() {
 }
 
 export function SiteHeader() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Logo />
+
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <NavLink
@@ -56,12 +50,67 @@ export function SiteHeader() {
             </NavLink>
           ))}
         </nav>
+
         <div className="flex items-center gap-2">
           <Button asChild className="hidden sm:inline-flex">
-            <Link to="/membership">Join the Club</Link>
+            <a
+              target="_blank"
+              href="https://lichess.org/team/edmonton-chess-club"
+            >
+              Lichess
+            </a>
+          </Button>
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            className="md:hidden"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </Button>
         </div>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden border-t bg-background/95 backdrop-blur">
+          <nav className="container py-4 space-y-2">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive }) =>
+                  cn(
+                    "block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors",
+                    isActive && "text-foreground bg-muted",
+                  )
+                }
+                end={item.to === "/"}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+            <div className="pt-2">
+              <Button asChild className="w-full">
+                <a
+                  target="_blank"
+                  href="https://lichess.org/team/edmonton-chess-club"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Lichess
+                </a>
+              </Button>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
