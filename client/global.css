@@ -1,0 +1,187 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Storyblok rich text styling */
+.storyblok-rich-text h1 {
+  @apply font-serif text-4xl md:text-5xl tracking-tight mb-4;
+}
+
+.storyblok-rich-text h2 {
+  @apply font-serif text-3xl md:text-4xl tracking-tight mb-3;
+}
+
+.storyblok-rich-text h3 {
+  @apply font-serif text-2xl md:text-3xl tracking-tight mb-2;
+}
+
+.storyblok-rich-text h4 {
+  @apply font-serif text-xl md:text-2xl tracking-tight mb-2;
+}
+
+.storyblok-rich-text p {
+  @apply text-muted-foreground mb-4;
+}
+
+.storyblok-rich-text ul {
+  @apply list-disc pl-5 space-y-1 text-sm text-muted-foreground mb-4;
+}
+
+.storyblok-rich-text ol {
+  @apply list-decimal pl-5 space-y-1 text-sm text-muted-foreground mb-4;
+}
+
+.storyblok-rich-text li {
+  @apply mb-1;
+}
+
+.storyblok-rich-text a {
+  @apply text-primary hover:underline;
+}
+
+.storyblok-rich-text strong {
+  @apply font-semibold;
+}
+
+.storyblok-rich-text em {
+  @apply italic;
+}
+
+.storyblok-rich-text blockquote {
+  @apply border-l-4 border-primary pl-4 italic text-muted-foreground mb-4;
+}
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Light theme - Edmonton Chess Club */
+    --background: 40 23% 98%;
+    --foreground: 220 26% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
+
+    --primary: 158 45% 20%; /* deep forest green */
+    --primary-foreground: 45 33% 96%; /* cream */
+
+    --secondary: 158 30% 92%;
+    --secondary-foreground: 158 45% 20%;
+
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 16% 42%;
+
+    --accent: 45 85% 55%; /* gold */
+    --accent-foreground: 220 26% 14%;
+
+    --destructive: 0 84% 56%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 158 20% 86%;
+    --input: 158 20% 86%;
+    --ring: 158 45% 24%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 40 23% 98%;
+    --sidebar-foreground: 220 26% 14%;
+    --sidebar-primary: 158 45% 20%;
+    --sidebar-primary-foreground: 45 33% 96%;
+    --sidebar-accent: 158 30% 92%;
+    --sidebar-accent-foreground: 158 45% 20%;
+    --sidebar-border: 158 20% 86%;
+    --sidebar-ring: 158 45% 24%;
+  }
+
+  .dark {
+    /* Dark theme - Edmonton Chess Club */
+    --background: 220 26% 10%;
+    --foreground: 45 33% 96%;
+
+    --card: 220 26% 12%;
+    --card-foreground: 45 33% 96%;
+
+    --popover: 220 26% 12%;
+    --popover-foreground: 45 33% 96%;
+
+    --primary: 158 45% 36%;
+    --primary-foreground: 45 33% 96%;
+
+    --secondary: 158 22% 18%;
+    --secondary-foreground: 45 33% 96%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 215 20% 72%;
+
+    --accent: 45 85% 60%;
+    --accent-foreground: 220 26% 12%;
+
+    --destructive: 0 62% 36%;
+    --destructive-foreground: 45 33% 96%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 158 45% 42%;
+    --sidebar-background: 220 26% 10%;
+    --sidebar-foreground: 45 33% 96%;
+    --sidebar-primary: 158 45% 36%;
+    --sidebar-primary-foreground: 45 33% 96%;
+    --sidebar-accent: 158 22% 18%;
+    --sidebar-accent-foreground: 45 33% 96%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 158 45% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  .font-serif {
+    font-family:
+      "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times,
+      serif;
+  }
+
+  /* Subtle chessboard background utility */
+  .chessboard-bg {
+    background-image:
+      linear-gradient(
+        45deg,
+        hsl(var(--foreground) / 0.06) 25%,
+        transparent 25%,
+        transparent 75%,
+        hsl(var(--foreground) / 0.06) 75%,
+        hsl(var(--foreground) / 0.06)
+      ),
+      linear-gradient(
+        45deg,
+        hsl(var(--foreground) / 0.06) 25%,
+        transparent 25%,
+        transparent 75%,
+        hsl(var(--foreground) / 0.06) 75%,
+        hsl(var(--foreground) / 0.06)
+      );
+    background-size: 40px 40px;
+    background-position:
+      0 0,
+      20px 20px;
+  }
+}
