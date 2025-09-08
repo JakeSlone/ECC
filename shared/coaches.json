@@ -1,0 +1,38 @@
+{
+  "coaches": [
+    {
+      "id": "1",
+      "name": "GM Dimitri Komarov",
+      "title": "Top ranked Canadian chess player",
+      "rating": "Grand Master (GM)",
+      "specialties": [
+        "Tactics Training",
+        "Opening Theory",
+        "Youth Development"
+      ],
+      "experience": "For learning chess you can contact me!",
+      "bio": "",
+      "image": "/coaches/dimitri_coach.jpg",
+      "email": "gmkomarov@i.ua",
+      "phone": "(587) 982 4147",
+      "hourlyRate": "Please Contact"
+    },
+    {
+      "id": 2,
+      "name": "NCM Sam Hoekman",
+      "title": "Top ranked Edmonton chess player, and passionate chess coach",
+      "rating": "NCM 2100+ CFC",
+      "specialties": [
+        "Tournament Preparation",
+        "Endgame Theory",
+        "Positional Play"
+      ],
+      "experience": "",
+      "bio": "As a National Candidate Master, I bring deep knowledge of all aspects of the game — from openings, middlegames, and endgames to the mental stamina needed for multiple four-hour games in a single day.",
+      "image": "/coaches/sam_coach.jpg",
+      "email": "samuelthoekman@gmail.com",
+      "phone": "(780) 221-1592",
+      "hourlyRate": "$30/hour"
+    }
+  ]
+}

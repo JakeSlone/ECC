@@ -9,6 +9,7 @@ const navItems = [
   { to: "/about", label: "About" },
   { to: "/events", label: "Events" },
   { to: "/membership", label: "Membership" },
+  { to: "/coaching", label: "Coaching" },
   { to: "/contact", label: "Contact" },
 ];
 

@@ -45,6 +45,9 @@ export default function Index() {
               <Button asChild variant="outline" size="lg">
                 <Link to="/events">See Events</Link>
               </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/coaching">Get Coaching</Link>
+              </Button>
             </div>
           </div>
         </div>
